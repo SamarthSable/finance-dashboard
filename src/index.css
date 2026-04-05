@@ -1,0 +1,531 @@
+body {
+  background: #0b1220;
+  color: #e2e8f0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+}
+
+/* Headings */
+h2 {
+  color: #ffffff !important;
+}
+
+p {
+  color: #d8dce3 !important;
+}
+
+h6 {
+  color: #cbd5f5 !important;
+}
+h5 {
+  color: #cbd5f5 !important;
+}
+
+h3 {
+  color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+background: var(--card-bg, linear-gradient(145deg, #0f172a, #1e293b)) !important;
+  border-radius: 18px !important;
+  border: 1px solid #1e293b !important;
+  padding: 20px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(59, 130, 246, 0.3);
+}
+.card h6 {
+  color: #f1f5f9 !important;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input,
+select {
+  background: #020617 !important;
+  border: 1px solid #334155 !important;
+  color: #fff !important;
+  padding: 10px;
+}
+
+input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border: none;
+}
+
+.btn-warning {
+  background: #f59e0b;
+  border: none;
+}
+
+.btn-danger {
+  background: #ef4444;
+  border: none;
+}
+
+.btn-success {
+  background: #22c55e;
+  border: none;
+}
+
+/* Table Container and General Styles */
+.table {
+  background-color: transparent !important;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: -8px;
+}
+
+/* Header Styling */
+.table th {
+  background-color: #1f2937 !important;
+  color: #e2e8f0 !important;
+  border: none !important;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Row Styling */
+.table td {
+  background-color: #111827 !important;
+  color: #cbd5f5 !important;
+  border-top: 1px solid #1f2937 !important;
+  border-bottom: 1px solid #1f2937 !important;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+/* Hover Effect */
+.table tbody tr:hover td {
+  background-color: #1f293b !important;
+  /* Slightly lighter on hover */
+  color: #ffffff !important;
+  transition: 0.2s;
+}
+
+/* Rounding the corners of the table rows */
+.table tr td:first-child {
+  border-radius: 10px 0 0 10px;
+  border-left: 1px solid #1f2937 !important;
+}
+
+.table tr td:last-child {
+  border-radius: 0 10px 10px 0;
+  border-right: 1px solid #1f2937 !important;
+}
+
+.table tr th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.table tr th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+
+.transaction-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
+.table-responsive {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #0f172a;
+}
+
+/* Custom scrollbar for Chrome/Safari */
+.table-responsive::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+/* Smooth scroll */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+
+/*Placeholder*/
+.form-control::placeholder {
+  color: #64748b !important;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.form-control:focus::placeholder {
+  color: #475569 !important;
+}
+
+
+.color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.side-list span {
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+.side-list strong {
+  color: #ffffff;
+}
+/* --- Desktop Defaults --- */
+.chart-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: 300px;
+}
+
+.chart-container {
+  flex: 1.5;
+  height: 100%;
+  min-width: 0;
+}
+
+.side-list {
+flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+.side-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.side-list::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+/* --- Mobile View Adjustment --- */
+@media (max-width: 768px) {
+
+  /* Stack the Pie Chart and the List vertically */
+  .chart-wrapper {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 10px;
+  }
+
+  /* Give the Chart a specific height so it's visible */
+  .chart-container {
+    width: 100% !important;
+    height: 220px !important;
+    flex: none;
+    /* Disable flex-grow on mobile */
+  }
+
+  /* Make the list full width below the chart */
+  .side-list {
+    width: 100% !important;
+    height: auto !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-top: 10px;
+    max-height: 200px;
+   
+  }
+
+  /* Fix the Line Chart Card height on mobile */
+  .line-chart-wrapper {
+    height: 200px !important;
+  }
+}
+/* list item */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #cbd5f5;
+}
+
+.color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
+}
+.card h6 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+
+/* Modal Overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 15px;
+  /* Ensures modal doesn't touch screen edges on small phones */
+}
+
+/* Responsive Modal Box */
+.custom-modal-content {
+  width: 100%;
+  /* Full width on mobile */
+  max-width: 450px;
+  /* Max width on desktop */
+  max-height: 90vh;
+  /* Prevents modal from being taller than the screen */
+  overflow-y: auto;
+  /* Adds scroll if form is long on small screens */
+  background: linear-gradient(145deg, #1e293b, #0f172a) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Styling adjustments for mobile inputs */
+@media (max-width: 576px) {
+  .custom-modal-content {
+    padding: 20px !important;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 14px;
+    /* Better for mobile keyboards */
+    padding: 8px 12px;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.theme-toggle-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode hover */
+body[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================= LIGHT THEME ================= */
+
+body[data-theme="light"] {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Cards */
+body[data-theme="light"] .card:not(.summary-card) {
+  background: linear-gradient(145deg, #ffffff, #e2e8f0) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Headings */
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] h5,
+body[data-theme="light"] h6 {
+  color: #0f172a !important;
+}
+
+body[data-theme="light"] p {
+  color: #475569 !important;
+}
+
+/* Inputs */
+body[data-theme="light"] input,
+body[data-theme="light"] select {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5f5 !important;
+}
+
+/* Table */
+body[data-theme="light"] .table td {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+body[data-theme="light"] .table th {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Side list */
+body[data-theme="light"] .side-list span {
+  color: #334155 !important;
+}
+
+body[data-theme="light"] .side-list strong {
+  color: #0f172a !important;
+}
+
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/*  Insights text system */
+
+/* Labels (small text) */
+.insight-label {
+  color: #94a3b8;
+}
+
+/* Main value */
+.insight-value {
+  color: #ffffff;
+}
+
+/* Sub text */
+.insight-subtext {
+  color: #64748b;
+}
+
+/* Light mode fix */
+body[data-theme="light"] .insight-label {
+  color: #64748b;
+}
+
+body[data-theme="light"] .insight-value {
+  color: #0f172a;
+}
+
+body[data-theme="light"] .insight-subtext {
+  color: #475569;
+}
+
+.icon-success {
+  color: #22c55e;
+}
+
+.icon-warning {
+  color: #f59e0b;
+}
+
+.icon-info {
+  color: #3b82f6;
+}
+.icon-primary {
+  color: #6366f1;
+}
+
+
+/*  DARK THEME (DEFAULT) */
+.app-footer {
+  margin-top: 40px;
+  padding: 16px 0;
+  border-top: 1px solid #1e293b;
+  background: transparent;
+}
+
+.app-footer p {
+  color: #94a3b8;
+}
+
+.footer-links span {
+  color: #64748b;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-links span:hover {
+  color: #3b82f6;
+}
+
+
+/*  LIGHT THEME */
+body[data-theme="light"] .app-footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+body[data-theme="light"] .app-footer p {
+  color: #475569;
+}
+
+body[data-theme="light"] .footer-links span {
+  color: #64748b;
+}
+
+body[data-theme="light"] .footer-links span:hover {
+  color: #2563eb;
+}
